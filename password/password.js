@@ -1,13 +1,13 @@
 checkPassword = () => {
-  let pass = prompt("Please enter the password")
+  let pass = prompt('Please enter the password')
   let tag = document.getElementById('password')
-  // Minimum 1 maj, 1 min et un chiffre
+  // Minimum 1 upper, 1 lower, 1 number
   let myRegex = /[a-z][A-Z][0-9]+/
-  // Pareil mais minimum 8
+  // Same but minimum 8 characters
   let myRegex2 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/
   if (myRegex.test(pass)) {
-    tag.innerHTML = "Le mot de passe est valable";
+    tag.innerHTML = "The password is valid"
   } else {
-    tag.innerHTML = "Le mot de passe n'est pas valable (8 caractères minimum contenant une min, maj et un chiffre)";
+    tag.innerHTML = "The password is invalid (8 characters minimum including uppercase, lowercase and number)"
   }
 }
